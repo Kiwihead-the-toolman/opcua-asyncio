@@ -89,7 +89,7 @@ async def main():
     myobj = await server.nodes.objects.add_object(idx, "MyObject")
     myvar = await myobj.add_variable(idx, "MyVariable", 6.7)
     await myvar.set_writable()    # Set MyVariable to be writable by clients
-    mystringvar = await myobj.add_variable(idx, "MyStringVariable", "Really nice string")
+    mystringvar = await myobj.add_variable(idx, "MyStringVariable", "Really nice string Franco")
     await mystringvar.set_writable()    # Set MyVariable to be writable by clients
     mydtvar = await myobj.add_variable(idx, "MyDateTimeVar", datetime.utcnow())
     await mydtvar.set_writable()    # Set MyVariable to be writable by clients
@@ -100,7 +100,7 @@ async def main():
     multiply_node = await myobj.add_method(idx, "multiply", multiply, [ua.VariantType.Int64, ua.VariantType.Int64], [ua.VariantType.Int64])
 
     # import some nodes from xml
-    await server.import_xml("custom_nodes.xml")
+    await server.import_xml("custom_nodes.xml") 
 
     # creating a default event object
     # The event object automatically will have members for all events properties

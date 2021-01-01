@@ -131,7 +131,7 @@ if __name__ == "__main__":
         multiply_node = myobj.add_method(idx, "multiply", multiply, [ua.VariantType.Int64, ua.VariantType.Int64], [ua.VariantType.Int64])
 
         # import some nodes from xml
-        server.import_xml("custom_nodes.xml")
+        server.import_xml("C:\Users\champouf\source\repos\opcua-asyncio\examples\sync\custom_nodes.xml")
 
         # creating a default event object
         # The event object automatically will have members for all events properties
