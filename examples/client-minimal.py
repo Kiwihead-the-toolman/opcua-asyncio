@@ -20,9 +20,18 @@ async def main():
         idx = await client.get_namespace_index(uri)
         # get a specific node knowing its node id
         # var = client.get_node(ua.NodeId(1002, 2))
-        # var = client.get_node("ns=3;i=2002")
-        var = await client.nodes.root.get_child(["0:Objects", f"{idx}:MyObject", f"{idx}:MyVariable"])
+        # var = client.get_node(ua.NodeId(30004, 0))
+        # var = client.get_node("ns=0;i=30004")
+        # var = client.get_node(ua.NodeId(13, 2))
+        # var = client.get_node("ns=2;i=13")
+        # var = await client.nodes.root.get_child(["0:Objects", f"{idx}:MyObject", f"{idx}:MyVariable"])
+        # var = await client.nodes.root.get_child(["0:Objects", "0:MyXMLFolder", "0:MyXMLObject", "0:MyXMLVariable"])
+        # print("My variable", var, await var.read_value())
+        # var = await client.nodes.root.get_child(["0:Objects", f"{idx}:MyObject", f"{idx}:myarrayvar"])
         print("My variable", var, await var.read_value())
+        # print(await var.read_value())
+        # item = await var.read_value()
+        # print(item[1])
         # print(var)
         # await var.read_data_value() # get value of node as a DataValue object
         # await var.read_value() # get value of node as a python builtin
